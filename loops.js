@@ -8,18 +8,29 @@
   # 
   # 
  */
-function drawVLine(n) {
-  // Continue the code here
-}
+  function drawVLine(n) {
+    for (let numberOfLoops = 0; numberOfLoops < n; numberOfLoops++){
+    console.log("#")
+    }
+    }
+    
+    drawVLine(4)
 /**
  *
  * In this function, you will have to draw a horizontal line with `n` length
  * for example `drawHLine(5) should print out # # # # # (there are spaces here!)
  */
-function drawHLine(n) {
-  // Continue the code here
+ function drawHLine(n) {
+  let codeline = ""
+  let hashes ="#"
+for (let i = 0; i < n; i++){
+  codeline = codeline.concat(hashes + ` `)
+}
+console.log(codeline)
 }
 
+drawHLine(5)
+// two other ways include creating a print function or process.stdout.write(Text)
 /**
  * 
  * In this function, you will have to draw a square with a length of `n` 
@@ -32,9 +43,14 @@ function drawHLine(n) {
   #  #  #  #  #
 
  */
-function drawSquare(n) {
-  // Continue the code here
-}
+  function drawSquare(n) {
+    for (let i = 0; i < n; i++){
+    drawHLine(n)}
+  }
+  drawSquare(5)
+//   for (let i = 0; i < n; i++){
+//   drawHLine()}
+// }
 
 /**
  * 
@@ -49,7 +65,11 @@ function drawSquare(n) {
 
  */
 function drawLeftTriangle(n) {
-  // Continue the code here
+ for (let r = 0; r <n; r++) {
+   for (let c = 0; c < n; c++){
+   Processing.stdout.write ("# ");}
+ }
+ console.log()
 }
 
 /**
@@ -65,7 +85,15 @@ function drawLeftTriangle(n) {
 
  */
 function drawTree(n) {
-  // Continue the code here
+for (let r=0; r<n; r++) {
+  for(let c=0; c <= r; c++){
+    for (let s=n-1; s>=0; s--){
+      print(" ")
+    } 
+    print("# ");
+  }
+  console.log("# ")
+}
 }
 /**
  *
@@ -78,4 +106,11 @@ function fillUnoDeck() {
   let redCards = [];
   let blueCards = [];
   // Fill the cards here
+  for (let i=0; i<10; i++){
+    for (let j =i; j<i; j++){
+  greenCards.push(i)
+yellowCards.push(i)
+redCards.push(i)
+blueCards.push(i)}}
 }
+fillUnoDeck()
